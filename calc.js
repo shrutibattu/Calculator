@@ -1,3 +1,11 @@
+// first UI & StyleSheet
+// Clickable Buttons + Assign Variables
+// Click Buttons and get the values
+// click buttons and get the values on display
+// number key/operatorkey
+// assign operatorkey
+// and assign clear button
+
 let firstNumber = 0;
 
 const display = document.querySelector(".display");
