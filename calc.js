@@ -15,12 +15,12 @@ equal.addEventListener("click", (event) => {
   display.textContent = parseInt(firstNumber) + parseInt(display.textContent);
 });
 
-console.log(equal);
-
 keys.addEventListener("click", (event) => {
   // console.log(event.target);
   if (event.target.innerHTML == "=") {
     return;
+  } else if (event.target.innerHTML == "AC") {
+    return (display.textContent = " ");
   } else {
     const value = event.target;
     const keyValue = value.textContent;

@@ -12,7 +12,7 @@
   padding-inline-end: 20px;
   text-align: right;
   color: orangered;
-
+  background-color: light;
   height: 70px;
   line-height: 70px;
   font-size: 25px;
@@ -54,4 +54,9 @@
   background-color: blue;
   color: orangered;
   transition: 0.5 ease-in-out;
+}
+@media (max-width: 600px) {
+  .calc-page {
+    background-color: lightslategrey;
+  }
 }
