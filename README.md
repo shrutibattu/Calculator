@@ -2,5 +2,15 @@
 
 Hello
 Welcome to my Calculator Project.
-Thanks for watching
-Shruti
+
+A simple Calculator for general purposes.
+
+Features
+Add
+Multiply
+Divide
+
+Built With
+html
+css
+javascript
