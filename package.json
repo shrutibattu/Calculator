@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Hello Welcome to my Calculator Project. Thanks for watching Shruti",
+  "main": "calc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrutibattu/Calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrutibattu/Calculator/issues"
+  },
+  "homepage": "https://github.com/shrutibattu/Calculator#readme",
+  "devDependencies": {
+    "cypress": "^7.4.0"
+  }
+}

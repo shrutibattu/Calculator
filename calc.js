@@ -7,24 +7,51 @@
 // and assign clear button
 
 let firstNumber = 0;
+let secondNumber = 0;
+let operationAddition = false;
+let operationMultiply = false;
+let operationDivide = false;
 
 const display = document.querySelector(".display");
 const keys = document.querySelector(".button-container");
 const plus = document.getElementById("plus");
+const multiply = document.getElementById("multiply");
+const divide = document.getElementById("divide");
 
-console.log(plus);
+divide.addEventListener("click", (event) => {
+  firstNumber = display.textContent;
+  operationDivide = true;
+});
+multiply.addEventListener("click", (event) => {
+  firstNumber = display.textContent;
+  operationMultiply = true;
+});
+
 plus.addEventListener("click", (event) => {
   firstNumber = display.textContent;
-  console.log(firstNumber);
+  operationAddition = true;
 });
 
 const equal = document.getElementById("equal");
+
 equal.addEventListener("click", (event) => {
-  display.textContent = parseInt(firstNumber) + parseInt(display.textContent);
+  secondNumber = display.textContent;
+  // display.textContent = parseInt(firstNumber) + parseInt(display.textContent);
+  if (operationMultiply == true) {
+    display.textContent = product(firstNumber, secondNumber);
+    operationMultiply = false;
+  } else if (operationAddition == true) {
+    display.textContent = add(firstNumber, secondNumber);
+    operationAddition = false;
+  } else {
+    display.textContent = division(firstNumber, secondNumber);
+    operationDivide = false;
+  }
+
+  // display.textContent = division(firstNumber, secondNumber);
 });
 
 keys.addEventListener("click", (event) => {
-  // console.log(event.target);
   if (event.target.innerHTML == "=") {
     return;
   } else if (event.target.innerHTML == "AC") {
@@ -32,9 +59,20 @@ keys.addEventListener("click", (event) => {
   } else {
     const value = event.target;
     const keyValue = value.textContent;
-    // console.log(keyValue);
     const displayvalue = display.textContent;
-    // console.log(displayvalue);
     display.textContent = keyValue;
   }
 });
+
+function add(param1, param2) {
+  // alert("Param1 " + parseInt(param1) + " Param2 " + parseInt(param2));
+  return parseInt(param1) + parseInt(param2);
+}
+
+function product(param1, param2) {
+  return parseInt(param1) * parseInt(param2);
+}
+
+function division(param1, param2) {
+  return parseInt(param1) / parseInt(param2);
+}
